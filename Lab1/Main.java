@@ -1,12 +1,40 @@
-public class Main {
-    public static void main(String[] args) {
 
-        System.out.println("Hello world!");
-        //Compulsory();
-        //Homework
+public class Main {
+
+    static int[][] mulMat(int[][] mat1, int[][] mat2) {
+        // To store result
+        int R1 = mat1.length;
+        int C1 = mat1[0].length;
+        int R2 = mat2.length;
+        int C2 = mat2[0].length;
+        int[][] resultMatrix = new int[R1][C2];
+        int i, j, k;
+        for (i = 0; i < R1; i++) {
+            for (j = 0; j < C2; j++) {
+                for (k = 0; k < C1; k++)
+                    resultMatrix[i][j] += mat1[i][k] * mat2[k][j];
+
+            }
+        }
+
+        return resultMatrix;
     }
 
+    public static int[][] matrixToPower(int power, int[][] matrix) {
+        int[][] resultMatrix = new int[matrix.length][matrix[0].length];
+        for (int i = 0; i < matrix.length; i++) {
+            System.arraycopy(matrix[i], 0, resultMatrix[i], 0, matrix[0].length);
+        }
+        while ((power - 1) != 0) {
+            resultMatrix = mulMat(resultMatrix, matrix);
+            power--;
+        }
+        return resultMatrix;
+    }
+
+
     public static void Compulsory() {
+        System.out.println("Hello world!");
         String[] languages = {"C", "C++", "C#", "Python", "Go", "Rust", "JavaScript", "PHP", "Swift", "Java"};
         int n = (int) (Math.random() * 1_000_000);
         int result = n * 3 + 0b10101 + 0xFF;
@@ -22,7 +50,8 @@ public class Main {
         }
         System.out.println("Willy-nilly, this semester I will learn " + languages[result]);
     }
-     public static void Homework(String input) {
+
+    public static void Homework(String input) {
         int dimension;
         try {
             dimension = Integer.parseInt(input);
@@ -59,7 +88,84 @@ public class Main {
             }
         } else {
             long stopTime = System.nanoTime();
-            System.out.println((stopTime - startTime));
+            System.out.println((stopTime - startTime) + " nanosecunde");
         }
 
+    }
+
+
+    public static void Bonus(String input1, String input2) {
+        int numberOfNodes, kRegulated;
+        try {
+            numberOfNodes = Integer.parseInt(input1);
+            kRegulated = Integer.parseInt(input2);
+            System.out.println("Input valid");
+        } catch (NumberFormatException e) {
+            System.out.println("Input invalid");
+            return;
+        }
+        //Cream matricea de adiacenta pentru circuit
+        int dimension = 3;
+        int[][] adjacencyMatrix = new int[dimension][dimension];
+        //primul nod este vecin cu al doilea nod si cu ultimul nod
+        adjacencyMatrix[0][1] = 1;
+        adjacencyMatrix[0][dimension - 1] = 1;
+        for (int i = 1; i < dimension - 1; i++) {
+            adjacencyMatrix[i][i - 1] = 1;
+            adjacencyMatrix[i][i + 1] = 1;
+        }
+        //ultimul nod este vecin cu primul nod si cu penultimul nod
+        adjacencyMatrix[dimension - 1][0] = 1;
+        adjacencyMatrix[dimension - 1][dimension - 2] = 1;
+        //Calculam A^2, A^3, A^n;
+        int[][] nthPower = new int[dimension][dimension];
+        nthPower = matrixToPower(4, adjacencyMatrix);
+/*        for(int[] row : nthPower) {
+            for (int column : row) {
+                System.out.print(column + "    ");
+            }
+            System.out.println();
+        }*/
+        //Cream matricea de adiacenta pentru graful regulat
+        if (kRegulated >= numberOfNodes || (kRegulated % 2 == 1 && numberOfNodes % 2 == 1)) {
+            System.out.println("Adjancency matrix cannot be created");
+            return;
+        }
+        //in primul pas, construim un circuit, ca la subpunctul anterior
+        int[][] regularGraph = new int[numberOfNodes][numberOfNodes];
+        //first case, when kRegulated is even
+
+        for (int i = 0; i < numberOfNodes; i++) {
+            for (int j = 1; j <= kRegulated / 2; j++) {
+                regularGraph[i][(i + j + numberOfNodes) % numberOfNodes] = 1;
+                regularGraph[i][(i - j + numberOfNodes) % numberOfNodes] = 1;
+            }
+            if (kRegulated % 2 == 1) {
+                regularGraph[i][(i + numberOfNodes / 2) % numberOfNodes] = 1;
+            }
+        }
+
+        for (int[] row : regularGraph) {
+            for (int column : row) {
+                System.out.print(column + "    ");
+            }
+            System.out.println();
+        }
+
+    }
+
+
+    public static void main(String[] args) {
+
+        //Compulsory();
+/*        if (args.length == 0) {
+            System.out.println("Numar insuficient de argumente!");
+            System.exit(-1); //termina aplicatia
+        }*/
+        //Homework(args[0]);
+
+        Bonus(args[0], args[1]);
+
+
+    }
 }
