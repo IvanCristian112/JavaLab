@@ -1,0 +1,15 @@
+Problema 2 :
+Am creat cel mai simplu patrat latin, de forma: 
+
+1 2 3 4 5
+5 1 2 3 4
+4 5 1 2 3
+3 4 5 1 2
+2 3 4 5 1
+
+Pentru n=30_000, timpul de rulare este de 2.5-3 secunde. 
+
+Problema 3 : 
+a) Un element A^n[i][j] indica numarul de drumuri de lungime n dintre nodurile i si j. De exemplu, daca A^2[i][j]=2, atunci avem 2 drumuri de la i la j.
+b) Am creat matricea de adiacenta conform slide-ului de laborator. In cazul in care numarul de noduri este impar si k este impar, graful nu poate fi construit. (de ex: daca 
+n si k sunt impare => suma gradelor nodurilor din graf e impara, insa suma gradelor nodurilor din graf este 2*|E| etc.)
