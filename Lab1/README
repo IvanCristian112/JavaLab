@@ -1,5 +1,5 @@
 Problema 2 :
-Am creat cel mai simplu patrat latin, de forma: 
+Am creat cel mai simplu patrat latin (fiecare linie a matricei este shiftata cu o pozitie) , de forma: 
 
 1 2 3 4 5
 5 1 2 3 4
