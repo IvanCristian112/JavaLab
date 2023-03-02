@@ -1,7 +1,7 @@
 
 public class Main {
 
-    static int[][] mulMat(int[][] mat1, int[][] mat2) {
+    public static int[][] mulMat(int[][] mat1, int[][] mat2) {
         // To store result
         int numberOfRows = mat1.length;
         int numberOfColumns = mat1[0].length;
