@@ -1,8 +1,8 @@
 public class Location {
     private String name;
     private LocationType type;
-    private float xCoordinate;
-    private float yCoordinate;
+    public int xCoordinate;
+    public int yCoordinate;
 
     public Location() {
     }
