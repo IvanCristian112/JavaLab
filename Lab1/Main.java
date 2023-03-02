@@ -3,15 +3,13 @@ public class Main {
 
     static int[][] mulMat(int[][] mat1, int[][] mat2) {
         // To store result
-        int R1 = mat1.length;
-        int C1 = mat1[0].length;
-        int R2 = mat2.length;
-        int C2 = mat2[0].length;
-        int[][] resultMatrix = new int[R1][C2];
-        int i, j, k;
-        for (i = 0; i < R1; i++) {
-            for (j = 0; j < C2; j++) {
-                for (k = 0; k < C1; k++)
+        int numberOfRows = mat1.length;
+        int numberOfColumns = mat1[0].length;
+        int numberOfColumns2 = mat2[0].length;
+        int[][] resultMatrix = new int[numberOfRows][numberOfColumns2];
+        for (int i = 0; i < numberOfRows; i++) {
+            for (int j = 0; j < numberOfColumns2; j++) {
+                for (int k = 0; k < numberOfColumns; k++)
                     resultMatrix[i][j] += mat1[i][k] * mat2[k][j];
 
             }
@@ -131,7 +129,6 @@ public class Main {
             System.out.println("Adjancency matrix cannot be created");
             return;
         }
-        //in primul pas, construim un circuit, ca la subpunctul anterior
         int[][] regularGraph = new int[numberOfNodes][numberOfNodes];
         //first case, when kRegulated is even
 
@@ -158,13 +155,10 @@ public class Main {
     public static void main(String[] args) {
 
         //Compulsory();
-/*        if (args.length == 0) {
-            System.out.println("Numar insuficient de argumente!");
-            System.exit(-1); //termina aplicatia
-        }*/
+
         //Homework(args[0]);
 
-        Bonus(args[0], args[1]);
+        //Bonus(args[0], args[1]);
 
 
     }
