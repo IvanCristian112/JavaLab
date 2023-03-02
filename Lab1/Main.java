@@ -1,8 +1,8 @@
 
 public class Main {
 
-    public static int[][] mulMat(int[][] mat1, int[][] mat2) {
-        // To store result
+    public static int[][] multiplyMatrix(int[][] mat1, int[][] mat2) {
+
         int numberOfRows = mat1.length;
         int numberOfColumns = mat1[0].length;
         int numberOfColumns2 = mat2[0].length;
@@ -24,7 +24,7 @@ public class Main {
             System.arraycopy(matrix[i], 0, resultMatrix[i], 0, matrix[0].length);
         }
         while ((power - 1) != 0) {
-            resultMatrix = mulMat(resultMatrix, matrix);
+            resultMatrix = multiplyMatrix(resultMatrix, matrix);
             power--;
         }
         return resultMatrix;
@@ -102,20 +102,20 @@ public class Main {
             System.out.println("Input invalid");
             return;
         }
-        //Cream matricea de adiacenta pentru circuit
+        //ADJACENCY MATRIX FOR CYCLE GRAPH
         int dimension = 3;
         int[][] adjacencyMatrix = new int[dimension][dimension];
-        //primul nod este vecin cu al doilea nod si cu ultimul nod
+        //first vertex is adjacent to the second and last vertex
         adjacencyMatrix[0][1] = 1;
         adjacencyMatrix[0][dimension - 1] = 1;
         for (int i = 1; i < dimension - 1; i++) {
             adjacencyMatrix[i][i - 1] = 1;
             adjacencyMatrix[i][i + 1] = 1;
         }
-        //ultimul nod este vecin cu primul nod si cu penultimul nod
+        //last vertex is adjacent to the first and penultimate vertex
         adjacencyMatrix[dimension - 1][0] = 1;
         adjacencyMatrix[dimension - 1][dimension - 2] = 1;
-        //Calculam A^2, A^3, A^n;
+        //C A^2, A^3, A^n;
         int[][] nthPower = new int[dimension][dimension];
         nthPower = matrixToPower(4, adjacencyMatrix);
 /*        for(int[] row : nthPower) {
@@ -124,13 +124,13 @@ public class Main {
             }
             System.out.println();
         }*/
-        //Cream matricea de adiacenta pentru graful regulat
+        //ADJACENCY MATRIX FOR K-REGULAR GRAPH
         if (kRegulated >= numberOfNodes || (kRegulated % 2 == 1 && numberOfNodes % 2 == 1)) {
             System.out.println("Adjancency matrix cannot be created");
             return;
         }
         int[][] regularGraph = new int[numberOfNodes][numberOfNodes];
-        //first case, when kRegulated is even
+
 
         for (int i = 0; i < numberOfNodes; i++) {
             for (int j = 1; j <= kRegulated / 2; j++) {
@@ -156,7 +156,7 @@ public class Main {
 
         //Compulsory();
 
-        //Homework(args[0]);
+        Homework(args[0]);
 
         //Bonus(args[0], args[1]);
 
