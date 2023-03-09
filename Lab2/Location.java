@@ -1,26 +1,34 @@
-public class Location {
-    private String name;
-    private LocationType type;
-    public int xCoordinate;
-    public int yCoordinate;
+public abstract class Location {
+    protected String name;
+    protected double xCoordinate;
+    protected double yCoordinate;
 
-    public Location() {
+    public Location(String name, double xCoordinate, double yCoordinate) {
+        this.name = name;
+        this.xCoordinate = xCoordinate;
+        this.yCoordinate = yCoordinate;
+
     }
 
-    public Location(String name) {
-        this.name = name;
+    public Location() {
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @Override
     public String toString() {
         return this.name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (!(obj instanceof Location)) return false;
+        Location location = (Location) obj;
+        return name.equals(location.name);
+
     }
 }

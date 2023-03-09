@@ -1,31 +1,43 @@
-public class Road {
-    private int length;
+public class Road  {
+    private String name;
+    private double length;
     private RoadType type;
     private int speedLimit;
-    private Location locatie1;
-    private Location locatie2;
+    private Location firstLocation;
+    private Location secondLocation;
 
     public Road() {
     }
 
-    public Road(int length) {
-        int x1 = this.locatie1.xCoordinate;
-        int x2 = this.locatie2.xCoordinate;
-        int y1 = this.locatie1.yCoordinate;
-        int y2 = this.locatie2.yCoordinate;
-        int euclidianDistance = (x1 - x2) ^ 2 + (y1 - y2) ^ 2;
-        if (length >= euclidianDistance) {
+    public Road(String name, RoadType type, Location a, Location b, double length, int speedLimit) {
+        this.name = name;
+        this.type = type;
+        this.firstLocation = a;
+        this.secondLocation = b;
+        this.speedLimit = speedLimit;
+        double euclideanDistance = Math.sqrt(Math.pow((this.secondLocation.xCoordinate - this.firstLocation.xCoordinate), 2) + Math.pow((this.secondLocation.yCoordinate - this.firstLocation.yCoordinate), 2));
+        if (length > euclideanDistance) {
             this.length = length;
         }
+
     }
 
-    public float getLength() {
+    public Location getFirstLocation() {
+        return firstLocation;
+    }
+
+    public Location getSecondLocation() {
+        return secondLocation;
+    }
+
+    public double getLength() {
         return length;
     }
 
-    public void setLength(int length) {
-        this.length = length;
+    public int getSpeedLimit() {
+        return speedLimit;
     }
+
 
     @Override
     public String toString() {
@@ -33,5 +45,13 @@ public class Road {
                 "length=" + length +
                 ", type=" + type +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == null) return false;
+        if (!(object instanceof Road)) return false;
+        Road road = (Road) object;
+        return (name.equals(road.name));
     }
 }
