@@ -74,7 +74,7 @@ public class Problem {
         2. We have more than one location;
          */
         for (Road a : this.roads) {
-            if (a.getLength() == 0) return false;
+            if (a.getLength() == 0 || a.getFirstLocation().equals(a.getSecondLocation())) return false;
         }
         if (locations.size() < 2) return false;
         return true;

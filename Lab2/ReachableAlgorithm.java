@@ -1,20 +1,37 @@
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 
 public class ReachableAlgorithm extends Algorithm {
+
+
     private boolean[] visited;
+    protected Map<Location, HashSet<Location>> adjacencyList;
 
     public ReachableAlgorithm(Problem problem) {
         super(problem);
+        visited = new boolean[problem.getLocations().size()];
         this.adjacencyList = new HashMap<Location, HashSet<Location>>();
+    }
+
+    private void createAdjacencyList() {
+        for (int i = 0; i < problem.getLocations().size(); i++) {
+            HashSet<Location> auxiliary = new HashSet<Location>();
+            adjacencyList.put(problem.getLocations().get(i), auxiliary);
+        }
+        for (Road road : problem.getRoads()) {
+            adjacencyList.get(road.getFirstLocation()).add(road.getSecondLocation());
+            adjacencyList.get(road.getSecondLocation()).add(road.getFirstLocation());
+
+
+        }
     }
 
     public Solution solve() {
         createAdjacencyList();
-        visited = new boolean[problem.getLocations().size()];
         Solution solution = new Solution();
-        solution.isReachable = RecursiveDFS(problem.getStartLocation(), problem.getEndLocation());
+        solution.setReachable(RecursiveDFS(problem.getStartLocation(), problem.getEndLocation()));
         return solution;
     }
 

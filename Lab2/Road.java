@@ -6,19 +6,19 @@ public class Road  {
     private Location firstLocation;
     private Location secondLocation;
 
-    public Road() {
-    }
 
-    public Road(String name, RoadType type, Location a, Location b, double length, int speedLimit) {
+    public Road(String name, RoadType type, Location firstLocation, Location secondLocation, double length, int speedLimit) {
         this.name = name;
         this.type = type;
-        this.firstLocation = a;
-        this.secondLocation = b;
+        this.firstLocation = firstLocation;
+        this.secondLocation = secondLocation;
         this.speedLimit = speedLimit;
         double euclideanDistance = Math.sqrt(Math.pow((this.secondLocation.xCoordinate - this.firstLocation.xCoordinate), 2) + Math.pow((this.secondLocation.yCoordinate - this.firstLocation.yCoordinate), 2));
         if (length > euclideanDistance) {
             this.length = length;
         }
+        firstLocation.getRoads().add(this);
+        secondLocation.getRoads().add(this);
 
     }
 
@@ -41,10 +41,7 @@ public class Road  {
 
     @Override
     public String toString() {
-        return "Road{" +
-                "length=" + length +
-                ", type=" + type +
-                '}';
+        return this.getFirstLocation() + " " + this.getSecondLocation();
     }
 
     @Override
@@ -54,4 +51,6 @@ public class Road  {
         Road road = (Road) object;
         return (name.equals(road.name));
     }
+
+
 }
