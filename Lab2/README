@@ -2,8 +2,8 @@ Am rezolvat partea Compulsory
 
 Analiza performantei algoritmului de la bonus : 
 Pentru generarea problemei, am creat instante ale problemei cu numar de locatii > 5_000 de locatii. Nodul de start din algoritmul Dijkstra este primul nod generat, iar
-al doilea nod este ales random. Pentru a crea un graf conectat am adaugat n*logn muchii(daca cele doua noduri nu sunt conectate, problema nu este valida); de exemplu, o problema cu 10_000 de locatii va avea aproximativ 42_000 de 
-drumuri. In general, drumul gasit are o lungime mica (5-6 noduri).
+al doilea nod este ales random. Pentru a crea un graf conectat am adaugat n*logn muchii(daca cele doua noduri nu sunt conectate, problema nu este valida); de exemplu,
+o problema cu 10_000 de locatii va avea aproximativ 42_000 de drumuri. In general, drumul gasit are o lungime mica (5-6 noduri).
 Timpii de rulare : 
 -pentru 5000 de locatii -> 0.72 secunde
 -pentru 7000 de locatii -> 1.78 secunde
