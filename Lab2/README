@@ -1,3 +1,5 @@
+Compulsory
+Relatia dintre clasele principale este de asociere bidirectionala (in clasa Location avem un membru Roads[] si in clasa Road avem doi membri Location).
 Homework 
 
 Pentru ca o problema sa fie valida, avem conditiile: 
