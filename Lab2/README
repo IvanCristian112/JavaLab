@@ -1,7 +1,7 @@
 Compulsory
 Relatia dintre clasele principale este de asociere bidirectionala (in clasa Location avem un membru Roads[] si in clasa Road avem doi membri Location).
-Homework 
 
+Homework 
 Pentru ca o problema sa fie valida, avem conditiile: 
 1. toate drumurile sa aiba lungimea >0
 2. toate drumurile sa aiba locatiile diferite (firstLocation!=secondLocation pentru un obiect Road)
