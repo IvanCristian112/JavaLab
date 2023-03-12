@@ -1,5 +1,8 @@
 Compulsory
 Relatia dintre clasele principale este de asociere bidirectionala (in clasa Location avem un membru Roads[] si in clasa Road avem doi membri Location).
+Am adaugat o clasa Problem in care putem adauga locatiile si drumurile pentru o anumita problema, o clasa abstracta Algorithm, din care mostenesc clasele 
+ReachableAlgorithm si DijkstraAlgorithm si clasa Solution pentru a printa solutiile. 
+In clasa TestAlgorithm am implementat testul de performanta pentru algoritmul de la bonus.
 
 Homework 
 Pentru ca o problema sa fie valida, avem conditiile: 
