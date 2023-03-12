@@ -34,14 +34,14 @@ public class Road  {
         return length;
     }
 
-    public int getSpeedLimit() {
-        return speedLimit;
-    }
+
 
 
     @Override
     public String toString() {
-        return this.getFirstLocation() + " " + this.getSecondLocation();
+        return "Road{" +
+                "name='" + name + '\'' +
+                '}';
     }
 
     @Override

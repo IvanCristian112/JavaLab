@@ -5,7 +5,7 @@ public class Solution {
     private ArrayList<Location> route;
 
     public Solution() {
-        route = new ArrayList<Location>();
+        route = new ArrayList<>();
     }
 
     public void setRoute(ArrayList<Location> route) {
