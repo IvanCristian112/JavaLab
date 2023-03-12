@@ -9,7 +9,7 @@ Pentru ca o problema sa fie valida, avem conditiile:
 1. toate drumurile sa aiba lungimea >0
 2. toate drumurile sa aiba locatiile diferite (firstLocation!=secondLocation pentru un obiect Road)
 3. sa avem macar 2 locatii
-Am implementat un algoritm de tip DFS cu lista de adiacenta. care determina daca putem ajunge de la o locatie la alta, care se opreste cand nodul curent este locatia 
+Am implementat un algoritm de tip DFS cu lista de adiacenta, care determina daca putem ajunge de la o locatie la alta, care se opreste cand nodul curent este locatia 
 de sfarsit.
 
 Bonus
