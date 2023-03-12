@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Node> nodes = new ArrayList<>();
+        List<Node> nodes = new ArrayList<>();
         for(int i=0;i<5;i++){
             Node node = new Person();
             node.setName(Integer.toString(i));
