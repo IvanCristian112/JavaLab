@@ -8,7 +8,7 @@ Am implementat un algoritm de tip DFS cu lista de adiacenta. care determina daca
 de sfarsit.
 
 Bonus
-Am implementat algoritm Dijkstra cu PriorityQueue. 
+Am implementat un algoritm Dijkstra cu PriorityQueue. 
 Analiza performantei: 
 Pentru generarea problemei, am creat instante cu numar de locatii dat ca parametru. Nodul de start din algoritmul Dijkstra este primul nod generat, iaral doilea nod
 este ales random. Pentru a crea un graf conectat am adaugat n*logn/2 muchii(daca cele doua noduri nu sunt conectate, nu putem aplica aplica algoritmul de gasire a 
