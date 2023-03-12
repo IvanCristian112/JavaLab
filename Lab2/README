@@ -18,7 +18,7 @@ Analiza performantei:
 Pentru generarea problemei, am creat instante cu numar de locatii dat ca parametru. Nodul de start din algoritmul Dijkstra este primul nod generat, iar al doilea nod
 este ales random. Pentru a crea un graf conectat am adaugat n*logn/2 muchii(daca cele doua noduri nu sunt conectate, nu putem aplica aplica algoritmul de gasire a 
 drumului de cost minim); de exemplu, o problema cu 10_000 de locatii va avea aproximativ 42_000 de drumuri. In general, drumul gasit are o lungime mica (5-6 noduri). 
-Timpul de rulare este dat in mare parte de generarea problemei, dupa cum se poate vedea din datele urmatoare: 
+Timpul de rulare este dat in mare parte de generarea problemei, dupa cum se poate vedea mai jos. 
 
  Nr de obiecte Location       Running time (generate problem) (s)        Running time(generate problem + solve) (s)
         5000                            0.709                                         0.765
