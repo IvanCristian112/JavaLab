@@ -15,4 +15,5 @@ Project algoritmul Greedy are o durate de executie medie de ~55 milisecunde, iar
 insa cuplajul gasit prin metoda greedy are o marime de ~1500 de muchii, in timp ce cel Graph4J are o valoarea apropiata de 3000. (pentru ca este cuplajul de cardinal
 maxim).
 
-//In designul problemei, s-ar putea considera si cazul in care un student ar trebui sa primeasca proiect, chiar daca toate proiectele lui preferate au fost luate deja.
+//In designul problemei, s-ar putea considera si cazul in care un student primeste un proiect pe care nu si-l dorea (pentru ca aceste proiecte au fost luate deja).
+In realitate, un student nu poate sa ramana fara proiect. //
