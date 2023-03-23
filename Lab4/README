@@ -11,7 +11,7 @@ si metoda getMaximumStableSet. (pentru a calcula multimea stabila de cardinal ma
 
 
 Pentru a testa performanta acestui algoritm si a algoritmului greedy, am creat o clasa AlgorithmTest. In metoda generateProblem, am creat o instanta a problemei cu
-numar de obiecte dat ca parametru, in care am adaugat pentru fiecare student 3 preferinte aleatoare din lista de proiecte (OBS: cu cat adaugam mai multe preferinte, 
+numar de obiecte dat ca parametru, in care am adaugat random pentru fiecare student 3 preferinte  din lista de proiecte (OBS: cu cat adaugam mai multe preferinte, 
 cu atat cardinalul cuplajului va fi mai mare). De exemplu, pentru 3000 de obiecte Student si 3000 de obiecte Project algoritmul Greedy are o durate de executie medie 
 de ~55 milisecunde, iar algoritmul implementat cu libraria Graph4J are un timp de rulare de ~ 110 secunde, insa cuplajul gasit prin metoda greedy are o marime de ~1500
 de muchii, in timp ce cel Graph4J are o valoarea apropiata de 3000. (pentru ca este cuplajul de cardinal maxim).
