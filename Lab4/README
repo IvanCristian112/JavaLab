@@ -1,1 +1,18 @@
-Am rezolvat partea compulsory
+Homework 
+
+Am folosit in clasa Main un obiect de tip Faker pentru a genera nume aleatoare pentru studenti si pentru proiecte. Tot in main am scris query-ul care returneaza toti 
+studentii cu mai putine preferinte decat media. Am adaugat clasa GreedyAlgorithm, in care am implementat algoritmul greedy.
+
+Bonus
+
+Am folosit libraria Graph4J pentru a implementa algoritmul pentru cuplaj de cardinal maxim (am folosit clasa HopcroftKarpMaximumMatching din packetul matching).
+Pentru determinarea acoperirii de noduri maximale si a multimii stabile minimale, am folosit tot clasa HopcroftKarpMaximumMatching, anume metoda getMinimumVertexCover 
+si metoda getMaximumStableSet. (pentru a calcula multimea stabila de cardinal maxim, am putea de asemenea sa calculam graful complementar acoperirii cu noduri).
+
+
+Pentru a testa performanta acestui algoritm si a algoritmului greedy, am creat o clasa AlgorithmTest. De exemplu, pentru 3000 de obiecte Student si 3000 de obiecte
+Project algoritmul Greedy are o durate de executie medie de ~55 milisecunde, iar algoritmul implementat cu libraria Graph4J are un timp de rulare de ~ 110 secunde,
+insa cuplajul gasit prin metoda greedy are o marime de ~1500 de muchii, in timp ce cel Graph4J are o valoarea apropiata de 3000. (pentru ca este cuplajul de cardinal
+maxim).
+
+//In designul problemei, s-ar putea considera si cazul in care un student ar trebui sa primeasca proiect, chiar daca toate proiectele lui preferate au fost luate deja.
