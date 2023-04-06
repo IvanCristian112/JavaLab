@@ -2,11 +2,14 @@ package org.example;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Catalog implements Serializable {
     private String name;
     private List<Document> documentList = new ArrayList<>();
+    private Map<Document, Integer> indexMap = new HashMap<>();
 
     public void add(Document doc) {
         documentList.add(doc);
@@ -18,6 +21,10 @@ public class Catalog implements Serializable {
 
     public String getName() {
         return name;
+    }
+
+    public Map<Document, Integer> getIndexMap() {
+        return indexMap;
     }
 
     public List<Document> getDocumentList() {
@@ -33,6 +40,7 @@ public class Catalog implements Serializable {
         return "Catalog{" +
                 "name='" + name + '\'' +
                 ", documentList=" + documentList +
+                ", indexMap=" + indexMap +
                 '}';
     }
 }

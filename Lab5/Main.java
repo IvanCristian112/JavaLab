@@ -1,24 +1,65 @@
 package org.example;
 
-import javax.print.Doc;
+
+import org.apache.tika.exception.TikaException;
+import org.xml.sax.SAXException;
+
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        var book = new Document("Introducere in Java","C:\\Users\\Victor\\Downloads");
-        book.addTag("author","Livius Ciocarlie");
-        var article = new Document("New aspects on API implementation","C:\\Users\\Victor\\Downloads");
-        article.addTag("article","Andrache Mihai");
+/*        var book = new Document("LFAC-Curs6", "C:\\Users\\Victor\\Downloads\\munte.jpg");
+        book.addTag("Livius Ciocarlie");
+        var article = new Document("New aspects on API implementation", "C:\\Users\\Victor\\Downloads\\test.txt");
+        article.addTag("Andrache Mihai");
+        var book2 = new Document("LFAC", "C:\\Users");
+        book2.addTag("Livius Ciocarlie");
         var catalog = new Catalog("Java");
-        catalog.add(book);
-        catalog.add(article);
-        System.out.println(catalog);
-        CatalogUtil catalogUtil = new CatalogUtil();
+        AddCommand add = new AddCommand(catalog);
+        add.add(book);
+        add.add(article);
+        add.add(book2);
+        System.out.println(catalog);*/
+/*        ViewCommand view = new ViewCommand();
         try {
-            catalogUtil.save(catalog,"C:\\Users\\Victor\\Desktop\\catalog.json");
+            view.view(book);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        ReportCommand report = new ReportCommand(catalog);
+        try {
+            report.report();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }*/
+/*        InfoCommand info = new InfoCommand(catalog);
+        try{
+            info.info();
+        } catch (TikaException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (SAXException e) {
+            throw new RuntimeException(e);
+        }*/
+
+/*        ListCommand list = new ListCommand(catalog);
+        list.list();*/
+/*        JGraphTAlgorithm algorithm = new JGraphTAlgorithm(catalog);
+        int number1 = algorithm.solve();
+        System.out.println(number1);
+        GreedyColoringAlgorithm algorithm2 = new GreedyColoringAlgorithm(catalog);
+        int number2 = algorithm2.solve();
+        System.out.println(number2);*/
+        TestAlgorithm testAlgorithm = new TestAlgorithm();
+
+        //testAlgorithm.testGreedyAlgorithm(1000);
+        for (int i = 0; i < 10; i++) {
+            testAlgorithm.testJGraphAlgorithm(100);
+        }
+
 
     }
 }

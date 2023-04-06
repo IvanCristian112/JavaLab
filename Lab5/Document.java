@@ -1,16 +1,18 @@
 package org.example;
 
-import javax.print.Doc;
+
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public  class Document implements Serializable {
     private String id;
     private String title;
     private String location;
     private static int counter = 0;
-    private Map<String, Object> tags = new HashMap<>();
+    private Set<String> tags = new HashSet<>();
 
 
     public String getId() {
@@ -32,8 +34,12 @@ public  class Document implements Serializable {
         counter++;
     }
 
-    public void addTag(String key, Object obj) {
-        tags.put(key, obj);
+    public Set<String> getTags() {
+        return tags;
+    }
+
+    public void addTag(String tag) {
+        tags.add(tag);
     }
 
     @Override
