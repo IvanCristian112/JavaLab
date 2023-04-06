@@ -6,9 +6,7 @@ Homework
 
 
   Am creat clase pentru toate comenzile mentionate.In clasa Main am exemplificat o utilizare pentru fiecare din comenzile implementate. Fisierle care se deschid prin
-comanda ViewCommand se afla pe masina locala, dar vor fi incluse in fisierele din repository. Pentru comanda ReportCommand am folosit template engine-ul Velocity pentru a genera raportul. In raport am inclus 
-titlul, ID, tagurile, si locatia fiecarui document. Pentru a crea un fisier jar executabil, am folosit pluginul Maven Assembly (am utilizat comanda *mvn clean compile
-assembly:single* si apoi am rulat fisierul cu comanda *java -jar fisierNume.jar* din terminal).
+comanda ViewCommand se afla pe masina locala, deci nu vor putea fi deschise (linia este comentata). Pentru comanda ReportCommand am folosit template engine-ul Velocity pentru a genera raportul. In raport am inclus titlul, ID, tagurile, si locatia fiecarui document. Pentru a crea un fisier jar executabil, am folosit pluginul Maven Assembly (am utilizat comanda *mvn clean compile assembly:single* si apoi am rulat fisierul cu comanda *java -jar fisierNume.jar* din terminal).
 
 Bonus
 
