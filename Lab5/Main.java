@@ -22,7 +22,7 @@ public class Main {
         System.out.println(catalog);
         ViewCommand view = new ViewCommand();
         try {
-            view.view(book);
+            //view.view(book);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
