@@ -15,7 +15,7 @@ Bonus
 
   Pentru comanda InfoCommand, am folosit ApacheTika pentru a extrage metadata despre fiecare document (am exemplificat comanda in clasa Main). Pentru partea de algoritm,am implementat un algoritm din libaria JGraphT si un algoritm greedy (in doua clase separate, JGraphTAlgorithm si GreedyColoringAlgorithm). Algoritmul din libraria JGraphT se bazeaza pe clasa BrownBacktrackColoring. Pentru a rezolva problema, am construit un graf Graph<Integer, DefaultEdge> ce corespunde fiecarui catalog. 
 Pentru testare, am implementat o clasa TestAlgorithm, in care am scris doua teste : unul simplu, pentru a verifica daca algoritmii au acelasi rezultat si unul random,
-in care am creat instante mari random. Pentru testul am rulat ii pe graful din poza de mai jos: 
+in care am creat instante mari random. Pentru testul am rulat ii pe graful din poza de mai jos (numarul de colorare trebuie sa fie 3): 
 
 ![alt text](https://github.com/IvanCristian112/JavaLab/blob/main/Lab5/graph(2).png?raw=true)
 
