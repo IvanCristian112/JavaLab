@@ -13,7 +13,7 @@
                 #else
                     </p>
                     <ul>
-                    #foreach($tag_name in $document.getTags().keySet())
+                    #foreach($tag_name in $document.getTags())
                         <li>$tag_name,  $document.getTags().get($tag_name)</li>
                     #end
                     </ul>
