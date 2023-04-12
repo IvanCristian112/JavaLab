@@ -83,7 +83,7 @@ public class AI {
             Set<Line> newLines = new HashSet<>(lines);
             newLines.remove(move);
             newLines.add(move);
-            int moveValue = minimax(newLines, /*depth=*/3, /*isMaximizingPlayer=*/false, getOpponentColor(currentPlayerColor), Integer.MIN_VALUE, Integer.MAX_VALUE);
+            int moveValue = minimax(newLines, 3, false, getOpponentColor(currentPlayerColor), Integer.MIN_VALUE, Integer.MAX_VALUE);
             if (moveValue > bestValue) {
                 bestValue = moveValue;
                 bestMove = move;
