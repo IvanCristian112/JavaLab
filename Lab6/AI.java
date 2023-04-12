@@ -25,9 +25,9 @@ public class AI {
 
     private int evaluate(Set<Line> lines, Color currentPlayerColor) {
         if (drawingPanel.checkForTriangle(lines, currentPlayerColor)) {
-            return 1000;
+            return Integer.MAX_VALUE;
         } else if (drawingPanel.checkForTriangle(lines, getOpponentColor(currentPlayerColor))) {
-            return -1000;
+            return Integer.MIN_VALUE;
         } else {
             return 0;
         }
