@@ -22,7 +22,7 @@ public class Timekeeper extends Thread {
                 break;
             }
             try {
-                Thread.sleep(250); // Sleep for 100 ms before checking the elapsed time
+                Thread.sleep(3000); // Sleep for 100 ms before checking the elapsed time
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -50,6 +50,7 @@ public class Robot implements Runnable {
     }
 
     public synchronized void pause() {
+
         paused = true;
     }
 
@@ -90,7 +91,7 @@ public class Robot implements Runnable {
                         }
                     }
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(2500);
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }

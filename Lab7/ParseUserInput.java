@@ -17,7 +17,9 @@ public class ParseUserInput {
                 if (index != -1 && index + 1 < string.length()) {
                     String afterSpace = string.substring(index + 1);
                     int robotValue = Integer.valueOf(afterSpace);
-                    exploration.getRobots().get(robotValue).pause();
+                    if (robotValue < exploration.getRobots().size()) {
+                        exploration.getRobots().get(robotValue).pause();
+                    }
                 }
             }
         } else if (string.startsWith("start")) {
@@ -29,7 +31,10 @@ public class ParseUserInput {
                 if (index != -1 && index + 1 < string.length()) {
                     String afterSpace = string.substring(index + 1);
                     int robotValue = Integer.valueOf(afterSpace);
-                    exploration.getRobots().get(robotValue).resume();
+
+                    if (robotValue < exploration.getRobots().size()) {
+                        exploration.getRobots().get(robotValue).resume();
+                    }
                 }
 
             }

@@ -17,7 +17,6 @@ public class Main {
         exploration.start();
         try {
             timekeeper.join();
-            //exploration.waitForRobots();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
