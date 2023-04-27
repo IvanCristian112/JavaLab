@@ -19,7 +19,11 @@ Cand am rulat metoda traverse pe graful random aleator am primit eroarea de mai 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 1000 out of bounds for length 1000
 	at org.graph4j.GraphImpl.degree(GraphImpl.java:833)
 	at org.graph4j.GraphImpl.lambda$subgraph$0(GraphImpl.java:1188)
+	
+	
 	...
+	
+	
 	at org.example.MultiThreadedBFS.traverse(MultiThreadedBFS.java:41)
 	at org.example.MultiThreadedBFS.main(MultiThreadedBFS.java:74)
 
