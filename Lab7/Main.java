@@ -9,7 +9,7 @@ public class Main {
         exploration.addRobot(new Robot("Wall-E"));
         exploration.addRobot(new Robot("R2D2"));
         exploration.addRobot(new Robot("Optimus Prime"));
-        exploration.addRobot(new Robot("Cristi Frasinaru"));
+        exploration.addRobot(new Robot("Cristi"));
 
 
         Timekeeper timekeeper = new Timekeeper(exploration, 10000);
