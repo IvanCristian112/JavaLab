@@ -17,6 +17,7 @@ Am incercat sa implementez un algoritm BFS colaborativ folosind Graph4J. Am folo
 Cand am rulat metoda traverse pe graful random aleator am primit eroarea de mai jos:
 
 
+
 	Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 1000 out of bounds for length 1000
 	at org.graph4j.GraphImpl.degree(GraphImpl.java:833)
 	at org.example.MultiThreadedBFS.traverse(MultiThreadedBFS.java:41)
