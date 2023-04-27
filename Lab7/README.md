@@ -12,7 +12,7 @@ In clasa Exploration am creat metoda displayTokens pentru a arata cati tokeni a 
 
 Bonus
 
-Am incercat sa implementez un algoritm BFS colaborativ folosind Graph4J. Am folosit RandomGnpGraphGenerator pentru a crea un graf aleator de 1000 de noduri cu edgeProbability de 0.2. In metoda traverse am folosit un ExecutorService pentru a imparti la un numar de threaduri sarcina de a explora graful. Am impartit graful intr-un numar de subgrafuri (conform numarului de threaduri folosite) si am folosit API-ul BFSTraverser din Graph4J pentru a vizita fiecare subgraf. 
+Am incercat sa implementez un algoritm BFS colaborativ folosind Graph4J in clasa CollaborativeBFS. Am folosit RandomGnpGraphGenerator pentru a crea un graf aleator de 1000 de noduri cu edgeProbability de 0.2. In metoda traverse am folosit un ExecutorService pentru a imparti la un numar de threaduri sarcina de a explora graful. Am impartit graful intr-un numar de subgrafuri (conform numarului de threaduri folosite) si am folosit API-ul BFSTraverser din Graph4J pentru a vizita fiecare subgraf. 
 
 Cand am rulat metoda traverse pe graful random aleator am primit eroarea de mai jos:
 
