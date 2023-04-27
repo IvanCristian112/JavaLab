@@ -1,8 +1,10 @@
 Compulsory
 
+
 Am creat modelul problemei cu clasele Token, Cell, Robot, Exploration, ExplorationMap, SharedMemory, Timekeeper, ParseUserInput, MultiThreadedBFS.
 
 Homework 
+
 
 Am implementat comenzile cu ajutorul clasei ParseUserInput care ruleaza din clasa Main. Am implementat comenzile "stop all", "stop n", unde n este al n-lea robot, "start all" si "start n" (asemanator cu "stop n"). Comenzile de stop si start le-am implementat cu metodele wait si notify. Pentru parcurgerea matricei, am facut ca fiecare robot sa incerce sa parcurga un rand. Daca ajunge la sfarsitul randului, cauta urmatorul rand care nu este explorat de alt robot. 
 Am implementat un thread daemon in clasa timekeeper care urmareste timpul de rulare al programului (si il afiseaza la un anumit interval de timp) si opreste executia daca intrece limita de timp. 
