@@ -1,1 +1,1 @@
-Lab 8
+Lab 8 - baze de date 
